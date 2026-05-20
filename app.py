@@ -12,7 +12,7 @@ with open(os.path.join(os.path.dirname(__file__), 'models', 'model2.pkl'), 'rb')
     model = pickle.load(f)
 
 # del csv crea un array con las provincias y si tiene costa  en las columna es_costa Y/o montaña en es_montana
-df = pd.read_csv('df_final2.csv')
+df = pd.read_csv(os.path.join(os.path.dirname(__file__), 'df_final2.csv'))
 provincias = (
     df[['location_name', 'es_costa', 'es_montana']]
     .drop_duplicates('location_name')
