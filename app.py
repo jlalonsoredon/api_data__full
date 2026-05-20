@@ -18,9 +18,9 @@ provincias = (
     .drop_duplicates('location_name')
     .sort_values('location_name')
     .reset_index(drop=True)
-    .rename(columns={'location_name': 'provincia', 'es_costa': 'costa', 'es_montana': 'montaña'})
+    .rename(columns={'location_name': 'provincia', 'es_costa': 'costa', 'es_montana': 'montana'})
     .assign(id=lambda d: d.index)
-    [['id', 'provincia', 'costa', 'montaña']]
+    [['id', 'provincia', 'costa', 'montana']]
     .to_dict(orient='records')
 )
 
